@@ -1,5 +1,5 @@
 {
-    "generado":  "2026-11-27 12:44",
+    "generado":  "2026-11-27 12:45",
     "pantallas":  {
                       "1_vacuna":  [
                                        {
@@ -151,6 +151,170 @@
                                          {
                                              "f":  "pantallas/6_pescados/04_pescados_4de4.jpg",
                                              "v":  "afeed398"
+                                         }
+                                     ],
+                      "c2_1_parrilla_y_premium":  [
+                                                      {
+                                                          "f":  "pantallas/c2_1_parrilla_y_premium/01_parrilla_1de3.jpg",
+                                                          "v":  "0e5413d0"
+                                                      },
+                                                      {
+                                                          "f":  "pantallas/c2_1_parrilla_y_premium/02_parrilla_2de3.jpg",
+                                                          "v":  "280ab795"
+                                                      },
+                                                      {
+                                                          "f":  "pantallas/c2_1_parrilla_y_premium/03_parrilla_3de3.jpg",
+                                                          "v":  "0e244292"
+                                                      },
+                                                      {
+                                                          "f":  "pantallas/c2_1_parrilla_y_premium/04_premium_1de2.jpg",
+                                                          "v":  "ed490e7b"
+                                                      },
+                                                      {
+                                                          "f":  "pantallas/c2_1_parrilla_y_premium/05_premium_2de2.jpg",
+                                                          "v":  "83e3e44c"
+                                                      }
+                                                  ],
+                      "c2_2_ternera_y_mayor":  [
+                                                   {
+                                                       "f":  "pantallas/c2_2_ternera_y_mayor/01_ternera_1de4.jpg",
+                                                       "v":  "ba581c31"
+                                                   },
+                                                   {
+                                                       "f":  "pantallas/c2_2_ternera_y_mayor/02_ternera_2de4.jpg",
+                                                       "v":  "e07b7ed4"
+                                                   },
+                                                   {
+                                                       "f":  "pantallas/c2_2_ternera_y_mayor/03_ternera_3de4.jpg",
+                                                       "v":  "46df9e27"
+                                                   },
+                                                   {
+                                                       "f":  "pantallas/c2_2_ternera_y_mayor/04_ternera_4de4.jpg",
+                                                       "v":  "906750ee"
+                                                   },
+                                                   {
+                                                       "f":  "pantallas/c2_2_ternera_y_mayor/05_mayor.jpg",
+                                                       "v":  "26d77fc1"
+                                                   }
+                                               ],
+                      "c2_3_cerdo_y_menudencias":  [
+                                                       {
+                                                           "f":  "pantallas/c2_3_cerdo_y_menudencias/01_cerdo_1de3.jpg",
+                                                           "v":  "520a598e"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_3_cerdo_y_menudencias/02_cerdo_2de3.jpg",
+                                                           "v":  "074ce4ca"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_3_cerdo_y_menudencias/03_cerdo_3de3.jpg",
+                                                           "v":  "4fa603c2"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_3_cerdo_y_menudencias/04_menudencias_1de2.jpg",
+                                                           "v":  "10d1ab7f"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_3_cerdo_y_menudencias/05_menudencias_2de2.jpg",
+                                                           "v":  "8f95e723"
+                                                       }
+                                                   ],
+                      "c2_4_pollo_y_milanesas":  [
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/01_pollo_1de2.jpg",
+                                                         "v":  "51f9eccd"
+                                                     },
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/02_pollo_2de2.jpg",
+                                                         "v":  "e9a5829e"
+                                                     },
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/03_milanesas_1de4.jpg",
+                                                         "v":  "703861c5"
+                                                     },
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/04_milanesas_2de4.jpg",
+                                                         "v":  "38120310"
+                                                     },
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/05_milanesas_3de4.jpg",
+                                                         "v":  "8ef66108"
+                                                     },
+                                                     {
+                                                         "f":  "pantallas/c2_4_pollo_y_milanesas/06_milanesas_4de4.jpg",
+                                                         "v":  "35840851"
+                                                     }
+                                                 ],
+                      "c2_5_chorizos_y_rellenos":  [
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/01_chorizos_1de3.jpg",
+                                                           "v":  "a5981ba3"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/02_chorizos_2de3.jpg",
+                                                           "v":  "872ee8e4"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/03_chorizos_3de3.jpg",
+                                                           "v":  "0a98e71c"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/04_rellenos_1de3.jpg",
+                                                           "v":  "90ea2480"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/05_rellenos_2de3.jpg",
+                                                           "v":  "befdd0ac"
+                                                       },
+                                                       {
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/06_rellenos_3de3.jpg",
+                                                           "v":  "b6cb21a6"
+                                                       }
+                                                   ],
+                      "c2_6_ofertas":  [
+                                           {
+                                               "f":  "pantallas/c2_6_ofertas/01_oferta.jpg",
+                                               "v":  "3e11578a"
+                                           },
+                                           {
+                                               "f":  "pantallas/c2_6_ofertas/02_jueves.jpg",
+                                               "v":  "361aa391"
+                                           },
+                                           {
+                                               "f":  "pantallas/c2_6_ofertas/03_tuya.jpg",
+                                               "v":  "41b0e94d"
+                                           },
+                                           {
+                                               "f":  "pantallas/c2_6_ofertas/04_seguinos.jpg",
+                                               "v":  "6cfc1465"
+                                           }
+                                       ],
+                      "c2_7_por_cajon":  [
+                                             {
+                                                 "f":  "pantallas/c2_7_por_cajon/01_cajon.jpg",
+                                                 "v":  "07d9669d"
+                                             }
+                                         ],
+                      "c2_entrada":  [
+                                         {
+                                             "f":  "pantallas/c2_entrada/01_promo20_finde.jpg",
+                                             "v":  "6c404576"
+                                         },
+                                         {
+                                             "f":  "pantallas/c2_entrada/02_mesa.jpg",
+                                             "v":  "21c73549"
+                                         },
+                                         {
+                                             "f":  "pantallas/c2_entrada/03_despensa.jpg",
+                                             "v":  "6f63ab3b"
+                                         },
+                                         {
+                                             "f":  "pantallas/c2_entrada/04_jueves.jpg",
+                                             "v":  "d4f84720"
+                                         },
+                                         {
+                                             "f":  "pantallas/c2_entrada/05_seguinos.jpg",
+                                             "v":  "db194078"
                                          }
                                      ]
                   }

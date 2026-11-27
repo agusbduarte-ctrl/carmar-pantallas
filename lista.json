@@ -1,5 +1,5 @@
 {
-    "generado":  "2026-11-27 14:23",
+    "generado":  "2026-11-27 14:27",
     "pantallas":  {
                       "1_vacuna":  [
                                        {
@@ -284,7 +284,7 @@
                       "c2_7_por_cajon":  [
                                              {
                                                  "f":  "pantallas/c2_7_por_cajon/01_cajon.jpg",
-                                                 "v":  "cc29663a"
+                                                 "v":  "f9dd651c"
                                              }
                                          ],
                       "c2_entrada":  [

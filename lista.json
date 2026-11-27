@@ -1,5 +1,5 @@
 {
-    "generado":  "2026-11-27 14:27",
+    "generado":  "2026-11-27 16:05",
     "pantallas":  {
                       "1_vacuna":  [
                                        {
@@ -293,19 +293,11 @@
                                              "v":  "6c404576"
                                          },
                                          {
-                                             "f":  "pantallas/c2_entrada/02_mesa.jpg",
-                                             "v":  "21c73549"
-                                         },
-                                         {
-                                             "f":  "pantallas/c2_entrada/03_despensa.jpg",
+                                             "f":  "pantallas/c2_entrada/02_despensa.jpg",
                                              "v":  "6f63ab3b"
                                          },
                                          {
-                                             "f":  "pantallas/c2_entrada/04_jueves.jpg",
-                                             "v":  "d4f84720"
-                                         },
-                                         {
-                                             "f":  "pantallas/c2_entrada/05_seguinos.jpg",
+                                             "f":  "pantallas/c2_entrada/03_seguinos.jpg",
                                              "v":  "db194078"
                                          }
                                      ]

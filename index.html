@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pantallas Carmar</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; cursor: none; }
+  .capa { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          object-fit: contain; opacity: 0; transition: opacity .6s; }
+  .capa.ver { opacity: 1; }
+  #ayuda { display: none; color: #fff; font: 28px/1.5 Arial, sans-serif; padding: 40px; cursor: auto; }
+  #ayuda a { color: #ffd34d; }
+</style>
+</head>
+<body>
+<img id="a" class="capa" alt="">
+<img id="b" class="capa" alt="">
+<div id="ayuda"></div>
+<script>
+// Reproductor de las pantallas de Carmar. Uso: index.html?p=1_vacuna  (opcional &s=8 = segundos por imagen)
+// Escrito en JavaScript viejo (sin fetch ni flechas) para que ande en el navegador de las Samsung Signage.
+(function () {
+  var REVISAR_CADA = 2 * 60 * 1000;     // busca cambios cada 2 minutos
+  var RECARGAR_CADA = 6 * 60 * 60 * 1000; // recarga la página entera cada 6 horas (libera memoria)
+
+  function param(nombre) {
+    var m = new RegExp("[?&]" + nombre + "=([^&]*)").exec(location.search);
+    return m ? decodeURIComponent(m[1]) : "";
+  }
+  var pantalla = param("p");
+  var segundos = parseFloat(param("s")) || 8;
+
+  var capas = [document.getElementById("a"), document.getElementById("b")];
+  var visible = 0;
+  var lista = [];        // urls que están rotando
+  var firma = "";        // para saber si cambió algo
+  var indice = 0;
+  var reloj = null;
+
+  function pedirLista(listo) {
+    var x = new XMLHttpRequest();
+    x.open("GET", "lista.json?t=" + Date.now(), true);
+    x.onreadystatechange = function () {
+      if (x.readyState !== 4) return;
+      if (x.status !== 200) { listo(null); return; }
+      try { listo(JSON.parse(x.responseText)); } catch (e) { listo(null); }
+    };
+    x.send();
+  }
+
+  function mostrarAyuda(datos) {
+    var div = document.getElementById("ayuda");
+    var html = "<p>Falta elegir la pantalla en el link. Pantallas disponibles:</p><ul>";
+    if (datos && datos.pantallas) {
+      for (var k in datos.pantallas) {
+        html += '<li><a href="?p=' + k + '">?p=' + k + "</a> (" + datos.pantallas[k].length + " imágenes)</li>";
+      }
+    }
+    div.innerHTML = html + "</ul>";
+    div.style.display = "block";
+  }
+
+  // Precarga todas las imágenes nuevas y recién ahí cambia la lista, así nunca queda en negro.
+  function precargar(urls, listo) {
+    var faltan = urls.length, ok = [];
+    if (!faltan) { listo(ok); return; }
+    for (var i = 0; i < urls.length; i++) {
+      (function (u, pos) {
+        var im = new Image();
+        im.onload = function () { ok[pos] = u; if (--faltan === 0) listo(ok); };
+        im.onerror = function () { if (--faltan === 0) listo(ok); };
+        im.src = u;
+      })(urls[i], i);
+    }
+  }
+
+  function siguiente() {
+    if (!lista.length) return;
+    if (indice >= lista.length) indice = 0;
+    var otra = 1 - visible;
+    capas[otra].src = lista[indice];
+    capas[otra].className = "capa ver";
+    capas[visible].className = "capa";
+    visible = otra;
+    indice++;
+  }
+
+  function actualizar() {
+    pedirLista(function (datos) {
+      if (!datos) return; // sin internet: sigue con lo que tenía
+      if (!pantalla || !datos.pantallas || !datos.pantallas[pantalla]) {
+        if (!lista.length) mostrarAyuda(datos);
+        return;
+      }
+      var archivos = datos.pantallas[pantalla];
+      var urls = [];
+      for (var i = 0; i < archivos.length; i++) urls.push(archivos[i].f + "?v=" + archivos[i].v);
+      var nueva = urls.join("|");
+      if (nueva === firma) return;
+      precargar(urls, function (cargadas) {
+        var limpias = [];
+        for (var j = 0; j < cargadas.length; j++) if (cargadas[j]) limpias.push(cargadas[j]);
+        if (!limpias.length) return;
+        firma = nueva;
+        lista = limpias;
+        indice = 0;
+        siguiente();
+        if (reloj) clearInterval(reloj);
+        reloj = setInterval(siguiente, segundos * 1000);
+      });
+    });
+  }
+
+  actualizar();
+  setInterval(actualizar, REVISAR_CADA);
+  // Recarga solo si hay internet en ese momento; si no, la página de error dejaría la pantalla sin nada.
+  setInterval(function () {
+    pedirLista(function (datos) { if (datos) location.reload(); });
+  }, RECARGAR_CADA);
+})();
+</script>
+</body>
+</html>

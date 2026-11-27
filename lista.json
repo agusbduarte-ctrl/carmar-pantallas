@@ -1,10 +1,10 @@
 {
-    "generado":  "2026-11-27 16:05",
+    "generado":  "2026-11-27 16:36",
     "pantallas":  {
                       "1_vacuna":  [
                                        {
                                            "f":  "pantallas/1_vacuna/01_parrilla_1de3.jpg",
-                                           "v":  "0e5413d0"
+                                           "v":  "f931057f"
                                        },
                                        {
                                            "f":  "pantallas/1_vacuna/02_parrilla_2de3.jpg",
@@ -156,7 +156,7 @@
                       "c2_1_parrilla_y_premium":  [
                                                       {
                                                           "f":  "pantallas/c2_1_parrilla_y_premium/01_parrilla_1de3.jpg",
-                                                          "v":  "0e5413d0"
+                                                          "v":  "f931057f"
                                                       },
                                                       {
                                                           "f":  "pantallas/c2_1_parrilla_y_premium/02_parrilla_2de3.jpg",

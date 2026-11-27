@@ -31,7 +31,19 @@
   var pantalla = param("p");
   var segundos = parseFloat(param("s")) || 8;
 
+  var giro = parseInt(param("g"), 10) || 0; // &g=90, 180 o 270: gira la imagen si la tele quedó colgada distinta
   var capas = [document.getElementById("a"), document.getElementById("b")];
+  if (giro) {
+    for (var c = 0; c < 2; c++) {
+      var st = capas[c].style;
+      if (giro === 90 || giro === 270) {   // se intercambian ancho y alto para que ocupe toda la pantalla
+        st.width = window.innerHeight + "px"; st.height = window.innerWidth + "px";
+        st.left = (window.innerWidth - window.innerHeight) / 2 + "px";
+        st.top = (window.innerHeight - window.innerWidth) / 2 + "px";
+      }
+      st.webkitTransform = st.transform = "rotate(" + giro + "deg)";
+    }
+  }
   var visible = 0;
   var lista = [];        // urls que están rotando
   var firma = "";        // para saber si cambió algo

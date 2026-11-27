@@ -1,5 +1,5 @@
 {
-    "generado":  "2026-11-27 12:45",
+    "generado":  "2026-11-27 12:55",
     "pantallas":  {
                       "1_vacuna":  [
                                        {
@@ -259,16 +259,8 @@
                                                            "v":  "0a98e71c"
                                                        },
                                                        {
-                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/04_rellenos_1de3.jpg",
-                                                           "v":  "90ea2480"
-                                                       },
-                                                       {
-                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/05_rellenos_2de3.jpg",
-                                                           "v":  "befdd0ac"
-                                                       },
-                                                       {
-                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/06_rellenos_3de3.jpg",
-                                                           "v":  "b6cb21a6"
+                                                           "f":  "pantallas/c2_5_chorizos_y_rellenos/04_rellenos.jpg",
+                                                           "v":  "b66dfbf1"
                                                        }
                                                    ],
                       "c2_6_ofertas":  [
@@ -292,7 +284,7 @@
                       "c2_7_por_cajon":  [
                                              {
                                                  "f":  "pantallas/c2_7_por_cajon/01_cajon.jpg",
-                                                 "v":  "07d9669d"
+                                                 "v":  "f9dd651c"
                                              }
                                          ],
                       "c2_entrada":  [

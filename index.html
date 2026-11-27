@@ -18,7 +18,8 @@
 <img id="b" class="capa" alt="">
 <div id="ayuda"></div>
 <script>
-// Reproductor de las pantallas de Carmar. Uso: index.html?p=1_vacuna  (opcional &s=8 = segundos por imagen)
+// Reproductor de las pantallas de Carmar. Uso: index.html?p=1_vacuna
+// Opcionales: &s=8 segundos por imagen · &g=90|180|270 girar · &r=1080 imágenes livianas
 // Escrito en JavaScript viejo (sin fetch ni flechas) para que ande en el navegador de las Samsung Signage.
 (function () {
   var REVISAR_CADA = 2 * 60 * 1000;     // busca cambios cada 2 minutos
@@ -107,7 +108,12 @@
       }
       var archivos = datos.pantallas[pantalla];
       var urls = [];
-      for (var i = 0; i < archivos.length; i++) urls.push(archivos[i].f + "?v=" + archivos[i].v);
+      // &r=1080: imágenes livianas para TV box que se traban con 4K
+      var liviana = param("r") === "1080";
+      for (var i = 0; i < archivos.length; i++) {
+        var f = liviana ? archivos[i].f.replace(/^pantallas\//, "pantallas_1080/") : archivos[i].f;
+        urls.push(f + "?v=" + archivos[i].v);
+      }
       var nueva = urls.join("|");
       if (nueva === firma) return;
       precargar(urls, function (cargadas) {
